@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name" : "Regdelivery Cast",
+    "version" : "1.0",
+    "description" : "Share your screen with anyone on Regdelivery",
+    "permissions": ["tabs","tabCapture","activeTab","declarativeContent","storage"],
+    "author" : "RegNet Labs Inc.",
+    "browser_action" : {
+      "default_popup" : "popup.html",
+      "default_title" : "Regdelivery Cast"
+    },
+    "content_scripts": [{
+    "matches": ["*://*.regdelivery.de/*","*://*.regdelivery.de/*/*"],
+    "js": ["content.js"]
+                        }],
+    "homepage_url" : "https://regdelivery.de/",
+    "icons": {
+        "16": "images/icon16.png",
+        "32": "images/icon32.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+      }
+    }
